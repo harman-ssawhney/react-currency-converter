@@ -22,6 +22,7 @@ class Conversion extends Component{
       });
    }
 
+  // list function to render selected currencies with their values for specified USD
   list(){
     if(this.state.selectedCurrencies.length){
     return this.state.selectedCurrencies.map((item,index)=>{
@@ -45,12 +46,14 @@ class Conversion extends Component{
   }
   }
 
+  // update value of flag to show search input box
   showsearch(){
     this.setState({
       showSearch: true
     })
   }
 
+  // on click function to add the currency to selected list
   showCurrency(){
     let selCurr = this.state.selectedCurrencies;
     if(this.state.searchValue !== '' && this.state.currencies.indexOf(this.state.searchValue) >=0)
@@ -63,6 +66,7 @@ class Conversion extends Component{
     })
   }
 
+  // function to remove any particular currency from selected currency list
   removeCurrency(curr){
     let selCurr = this.state.selectedCurrencies;
     selCurr.splice([selCurr.indexOf(curr)],1);
@@ -72,6 +76,7 @@ class Conversion extends Component{
     });
   }
 
+  // function to create datalist option list
   optionList(){
     let list= [];
     for (let index in this.state.currencies) {
@@ -80,6 +85,7 @@ class Conversion extends Component{
     return list;
   }
 
+  // function to manage bottom add currency / search currency button
   searchInput(){
     if(this.state.showSearch){
     return (

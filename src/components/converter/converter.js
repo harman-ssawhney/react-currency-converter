@@ -13,6 +13,7 @@ class Converter extends Component{
   }
 
   componentDidMount(){
+     // api call to fetch different currencies and their rates with respect to USD
      axios.get("https://api.exchangeratesapi.io/latest?base=USD")
      .then(res=>{
        console.log(res);
@@ -25,6 +26,7 @@ class Converter extends Component{
      });
   }
 
+  // update value to USD
   updateUsd(evt){
     this.setState({
       usd: evt.target.value
@@ -32,6 +34,7 @@ class Converter extends Component{
   }
 
   render(){
+    // render conversions list  and will show loading untill the data is fetched from api for differenct currency rates
     if(this.state.conversionList){
     return (
       <div className="converter">
