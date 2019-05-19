@@ -1,0 +1,53 @@
+.converter .conversions{
+  padding: 8px;
+}
+
+.converter .conversions .list-item{
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+  /*margin-top: 10px;*/
+}
+
+.converter .conversions .list-item:not(:nth-child(1)){
+  margin-top: 10px;
+}
+
+.converter .conversions .list-item .left-text{
+  display: flex;
+  flex: 4;
+  border-right: 1px solid black;
+  padding: 8px;
+}
+
+.converter .conversions .list-item .right-text{
+  flex: 1;
+}
+
+.converter .conversions .list-item .left-text .left{
+  flex: 3;
+}
+
+.converter .conversions .list-item .left-text .right{
+  flex: 1;
+}
+
+.converter .conversions .add-more{
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.converter .conversions .search{
+  margin-top: 15px;
+}
+
+.converter .conversions .search .submit{
+  margin-left: 10px;
+  cursor: pointer;
+}
+.converter .conversions .list-item .right-text span{
+    position: relative;
+    top: 35%;
+    left: 40%;
+    cursor: pointer;
+  }

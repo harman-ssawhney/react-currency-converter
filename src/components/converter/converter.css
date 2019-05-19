@@ -1,0 +1,30 @@
+.converter{
+position: relative;
+width:45%;
+border: 1px solid black;
+left: 50%;
+transform: translate(-50%,0);
+}
+
+.converter .top-text{
+  position: relative;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.converter .base-currency{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.converter .base-currency .base-currency-text{
+  flex: 2;
+}
+
+.converter .base-currency .base-input{
+  width:50px;
+  flex: 1;
+}
