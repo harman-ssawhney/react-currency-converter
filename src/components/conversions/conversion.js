@@ -32,7 +32,7 @@ class Conversion extends Component{
          <div className="left-text">
           <div className="left">
             <div className="currency-name">{item}</div>
-            <div className="currency-match">1USD = {this.props.conversionList.rates[item]}</div>
+            <div className="currency-match">1 USD = {item} {this.props.conversionList.rates[item]}</div>
           </div>
           <div className="right">{conversionToCurr}</div>
          </div>

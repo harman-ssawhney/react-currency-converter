@@ -28,6 +28,10 @@
   flex: 3;
 }
 
+.converter .conversions .list-item .left-text .left .currency-match{
+   margin-top: 8px;
+}
+
 .converter .conversions .list-item .left-text .right{
   flex: 1;
 }
