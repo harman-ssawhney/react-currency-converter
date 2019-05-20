@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './converter.css';
 import  Conversion from '../conversions/conversion';
-import axios from 'axios';
+import FetchRates from '../../services/services'
 
 class Converter extends Component{
   constructor(props){
@@ -14,9 +14,7 @@ class Converter extends Component{
 
   componentDidMount(){
      // api call to fetch different currencies and their rates with respect to USD
-     axios.get("https://api.exchangeratesapi.io/latest?base=USD")
-     .then(res=>{
-       console.log(res);
+     FetchRates().then(res=>{
        this.setState({
          conversionList : res.data
        })
